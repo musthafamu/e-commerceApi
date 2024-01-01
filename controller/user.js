@@ -61,6 +61,7 @@ export const getAlluser=async(req,res)=>{
 }
 
 
+
 export const userStats = async (req, res) => {
   try {
     const currentDate = new Date();
@@ -88,3 +89,29 @@ export const userStats = async (req, res) => {
     res.status(500).json({ message: "Internal server error", error: error.message });
   }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
