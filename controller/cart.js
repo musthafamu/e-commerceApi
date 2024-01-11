@@ -59,3 +59,12 @@ export const getallCart=async(req,res)=>{
     }
 }
 
+export const DeleteCart=async(req,res)=>{
+    try{
+  await Cart.findByIdAndDelete(req.params.id);
+  res.status(200).json('deleted successfully');
+    }catch(e){
+        res.status(500).json(e)
+    }
+}
+

@@ -5,7 +5,8 @@ import { connectDb } from "./config/db.js";
 import authRouter from "./routers/Auth.js";
 import  userRouter from "./routers/users.js";
 import  productRouter from  "./routers/product.js";
-import cartRouter from "./routers/cart.js"
+import cartRouter from "./routers/cart.js";
+import  orderRouter from "./routers/order.js";
 
 dotenv.config()
 connectDb();
@@ -19,6 +20,7 @@ app.use('/auth',authRouter)
 app.use('/user',userRouter);
 app.use('/products',productRouter);
 app.use('/cart',cartRouter);
+app.use('/order',orderRouter);
 
 app.listen(port,()=>{
     console.log(port)
